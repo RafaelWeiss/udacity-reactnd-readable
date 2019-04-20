@@ -49,7 +49,9 @@ module.exports = {
 	"msg.postUpdateSuccess" : "Post atualizado com sucesso!",
 	
 	"msg.postNotFound" : "Post não encontrado!",
-	"msg.fieldIsRequired" : "Campo obrigatório"
+	"msg.fieldIsRequired" : "Campo obrigatório",
+	"msg.pageNotFound" : "Página não encontrada!",
+	"msg.pageNotRows" : "Sem resultado!"
 	
 }
 

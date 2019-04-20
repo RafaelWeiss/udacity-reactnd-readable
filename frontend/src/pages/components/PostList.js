@@ -8,18 +8,9 @@ import { compose } from 'redux';
 import { connect } from 'react-redux';
 import { injectIntl } from 'react-intl';
 import uuidv1 from 'uuid/v1';
-import {
-    actions as postsActions,
-    selectors as postsSelectors
-} from '../../store/reducers/postsReducer';
-import {
-    actions as categoriesActions,
-    selectors as categoriesSelectors
-} from '../../store/reducers/categoriesReducer';
-import {
-    actions as filterActions,
-    selectors as filterSelectors
-} from '../../store/reducers/postsFilterReducer';
+import { actions as postsActions, selectors as postsSelectors } from '../../store/reducers/postsReducer';
+import { actions as categoriesActions, selectors as categoriesSelectors } from '../../store/reducers/categoriesReducer';
+import { actions as filterActions, selectors as filterSelectors } from '../../store/reducers/postsFilterReducer';
 
 import CategoryPropType from '../prop-types/CategoryPropType';
 import CategoryFilter from './CategoryFilter';
@@ -133,7 +124,9 @@ class PostList extends Component {
                         onOpenPost={this.handleOpenPost}
                     />
                 ))}
-
+                {posts.length === 0 && (
+                    <div className="page-notfound">{intl.formatMessage({ id: 'msg.pageNotRows' })}</div>
+                )}
                 <PostModal
                     open={postModalOpen}
                     categories={categories}

@@ -3,7 +3,6 @@ module.exports = {
     'label.back': 'Back',
     'label.en_US': 'English (US)',
     'label.pt_BR': 'Portuguese (BR)',
-
     'label.attention': 'Attention',
     'label.title': 'Title',
     'label.by': 'By',
@@ -12,7 +11,7 @@ module.exports = {
     'label.category': 'Category',
     'label.author': 'Author',
     'label.body': 'Text',
-    'label.score': 'Tanned',
+    'label.score': 'Likes',
     'label.timestamp': 'Date',
     'label.comments': 'Comments',
 
@@ -37,15 +36,14 @@ module.exports = {
     'msg.postRemoveDialog': 'Remove post?',
     'msg.commentRemoveDialog': 'Remove comment?',
     'msg.commentAddSuccess': 'Comment added successfully!',
-    'msg.commentUpdateSuccess': 'Comet updated successfully!',
-    'msg.commentDeleteSuccess': 'Comet deleted successfully!',
-
+    'msg.commentUpdateSuccess': 'Comment updated successfully!',
+    'msg.commentDeleteSuccess': 'Comment deleted successfully!',
     'msg.voteAddSuccess': 'Thanks for feedback!',
-
     'msg.postDeleteSuccess': 'Post deleted successfully!',
     'msg.postSaveSuccess': 'Post saved successfully!',
     'msg.postUpdateSuccess': 'Post updated successfully!',
-
     'msg.postNotFound': 'Post not found!',
-    'msg.fieldIsRequired': 'Required field'
+    'msg.fieldIsRequired': 'Required field',
+    "msg.pageNotFound" : "Page not found!",
+    "msg.pageNotRows" : "No result!"
 };
