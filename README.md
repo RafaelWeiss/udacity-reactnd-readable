@@ -1,1 +1,1 @@
-# -udacity-reactnd-readable
+# udacity-reactnd-readable
