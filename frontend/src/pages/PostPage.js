@@ -19,7 +19,6 @@ import {
     selectors as categoriesSelectors
 } from '../store/reducers/categoriesReducer';
 
-import PostCommentsList from './components/PostCommentList';
 import CommentPropType from './prop-types/CommentPropType';
 import CategoryPropType from './prop-types/CategoryPropType';
 import PostPropType from './prop-types/PostPropType';
@@ -107,8 +106,8 @@ class PostPage extends Component {
                             onVoteDown={this.handleVoteDown}
                             onVoteUp={this.handleVoteUp}
                             onOpenPost={this.handleOpenPost}
-                        />
-                        <PostCommentsList post={post} comments={comments} />
+                            comments={comments}
+                        />                        
                         <PostModal
                             open={editModalOpen}
                             categories={categories}

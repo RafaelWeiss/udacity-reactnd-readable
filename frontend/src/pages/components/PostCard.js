@@ -13,6 +13,7 @@ import { injectIntl, FormattedDate } from 'react-intl';
 import PostPropType from '../prop-types/PostPropType';
 import withDialog from '../../components/AppDialog/withDialog';
 import { Link } from 'react-router-dom';
+import PostCommentsList from './PostCommentList';
 
 function PostCard(props) {
     const voteUp = () => {
@@ -37,7 +38,7 @@ function PostCard(props) {
         });
     };
 
-    const { post, intl } = props;
+    const { post, intl, comments } = props;
 
     return (
         <div>
@@ -81,7 +82,7 @@ function PostCard(props) {
                 <CardFooter>
                     <Link to={`/${post.category}/${post.id}`} key={post.id}>
                         <span className="total-comments">
-                            {post.commentCount} {intl.formatMessage({ id: 'label.comments' })}
+                            {comments ? comments.length : post.commentCount} {intl.formatMessage({ id: 'label.comments' })}
                         </span>
                     </Link>
                     <div className="">
@@ -95,6 +96,7 @@ function PostCard(props) {
                     </div>
                 </CardFooter>
             </Card>
+            {comments && <PostCommentsList post={post} comments={comments} />}
         </div>
     );
 }
