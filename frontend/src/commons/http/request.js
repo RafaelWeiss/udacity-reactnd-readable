@@ -9,5 +9,6 @@ export default {
     query: url => executeRequest('get', url),
     save: (url, data) => executeRequest('post', url, data),
     update: (url, data) => executeRequest('put', url, data),
-    remove: url => executeRequest('delete', url)
+    remove: url => executeRequest('delete', url),
+    delete: url => executeRequest('delete', url)
 };
